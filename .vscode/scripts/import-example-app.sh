@@ -15,7 +15,7 @@
 
 set -e
 
-VELOCITAS_EXAMPLES_PATH="$(python -c 'import velocitas_examples; print(velocitas_examples.__path__[0])')"
+VELOCITAS_EXAMPLES_PATH="$(python3 -c 'import velocitas_examples; print(velocitas_examples.__path__[0])')"
 CHOSEN_EXAMPLE=$@
 
 if [[ `git status --porcelain app/` ]]; then
