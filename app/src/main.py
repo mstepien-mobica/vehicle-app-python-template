@@ -78,7 +78,7 @@ class SampleApp(VehicleApp):
         # - Publishes current speed to MQTT Topic (i.e. DATABROKER_SUBSCRIPTION_TOPIC).
         await self.publish_event(
             DATABROKER_SUBSCRIPTION_TOPIC,
-            json.dumps({"speed": vehicle_speed}),
+            json.dumps({"Publishes current speed ": vehicle_speed}),
         )
 
     @subscribe_topic(GET_SPEED_REQUEST_TOPIC)
@@ -115,7 +115,7 @@ class SampleApp(VehicleApp):
 
 async def main():
     """Main function"""
-    logger.info("Starting SampleApp...")
+    logger.info("Starting Mobica first SDV app...")
     # Constructing SampleApp and running it.
     vehicle_app = SampleApp(vehicle)
     await vehicle_app.run()
